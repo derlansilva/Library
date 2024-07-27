@@ -6,6 +6,7 @@ public class Book {
 
     public Book(String title ){
         this.title = title;
+        
     }
     
     public String getTitle() {
@@ -20,6 +21,6 @@ public class Book {
     @Override
     public String toString() {
         // TODO Auto-generated method stub
-        return super.toString();
+        return "Titulo " + this.title;
     }
 }
