@@ -2,6 +2,7 @@ package com.example.project.classes;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class LibraryManager implements Ibooks{
     private List<Book> books;
@@ -91,14 +92,24 @@ public class LibraryManager implements Ibooks{
         return books.get(index);
     }
 
+
     public void giveBack(String cpf){
         People people = findMember(cpf);
 
-        System.out.println("Voce tem o livro emprestado :"+ people.getBook().getTitle());
+        System.out.println(" LIVRO EMPRESTADO - "+ people.getBook().getTitle());
         System.out.println("DESEJA DEVOLVER?");
         System.out.println("[1] - SIM");
         System.out.println("[2] - NÃO");
-        
+        int choice = new Scanner(System.in).nextInt();
+        if(choice == 1){
+            for(int i = 0 ; i< books.size() ; i++){
+                if(books.get(i).getTitle() == people.getBook().getTitle()){
+                    books.get(i).setRented(false);
+                }
+            }
+        }else{
+            return;
+        }
     
     }
 }

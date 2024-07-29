@@ -46,6 +46,7 @@ public class Main {
                     break;
 
                 default:
+                    System.out.println("OPÇÃO NÃO ENCONTRADA");
                     break;
             }
         }
@@ -82,7 +83,7 @@ public class Main {
         System.out.println("Digite seu cpf");
         String cpf = scanner.nextLine();
 
-        
+        libraryManager.giveBack(cpf);
     }
 
     private static void showLoaded() {

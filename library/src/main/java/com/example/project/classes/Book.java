@@ -32,6 +32,6 @@ public class Book {
     @Override
     public String toString() {
         // TODO Auto-generated method stub
-        return "Titulo " + this.title;
+        return this.title;
     }
 }
